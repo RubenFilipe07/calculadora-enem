@@ -50,9 +50,9 @@ $(document).ready(function () {
 
             $('#tabela-nota-humanas').html(`${notaHumanas}`);
             $('#tabela-nota-natureza').html(`${notaNatureza}`);
-            $('#tabela-nota-linguagens').html(`${notaNatureza}`);
-            $('#tabela-nota-matematica').html(`${notaNatureza}`);
-            $('#tabela-nota-redacao').html(`${notaNatureza}`);
+            $('#tabela-nota-linguagens').html(`${notaLinguagens}`);
+            $('#tabela-nota-matematica').html(`${notaMatematica}`);
+            $('#tabela-nota-redacao').html(`${notaRedação}`);
 
             $('#tabela-peso-humanas').html(`${pesoHumanas}`);
             $('#tabela-peso-natureza').html(`${pesoNatureza}`);
