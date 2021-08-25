@@ -42,6 +42,10 @@ input:nth-child(2) {
     max-width: 50%;
 }
 
+.alert .btn-close {
+    padding: 0.25rem 1rem;
+}
+
 .janela-detalhamento {
     display: none;
 }
@@ -60,6 +64,12 @@ footer, footer a {
 
 footer a:visited {
     color: #586069;
+}
+
+.alert {
+    width: 50%;
+    margin: 0px auto;
+    display: none;
 }
 
 @media only screen and (max-width: 680px) {
@@ -90,5 +100,11 @@ footer a:visited {
         width: 50%;
         position: relative;
         left: 25%;
+    }
+    .alert {
+        width: 100%;
+    }
+    .alert .btn-close {
+        padding: 1.25rem 1rem;
     }
 }
