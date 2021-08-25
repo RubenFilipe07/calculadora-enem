@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.form-control label {
+    font-weight: 500;
+    padding: 0px 0px 10px 0px;
+}
+
+.form-group {
+    padding: 10px;
+}
+
+button {
+    margin-top: 15px;
+}
+
+#formulario {
+    max-width: 50%;
+    margin: 30px auto;
+    overflow: auto;
+}
+
+input:nth-child(1) {
+    max-width: 60%;
+}
+
+input:nth-child(2) {
+    max-width: 40%;
+}
+
+#media-final {
+    margin-right: 4%;
+    margin-top: 3%;
+    color: transparent;
+    float: right;
+}
+
+#detalhamento {
+    margin: 50px auto;
+    max-width: 50%;
+}
+
+.janela-detalhamento {
+    display: none;
+}
+
+#btn-fechar-detalhamento {
+    width: 10%;
+    position: relative;
+    left: 45%;
+    right: auto;
+}
+
+footer, footer a {
+    color: #586069;
+    font-weight: 200;
+}
+
+footer a:visited {
+    color: #586069;
+}
+
+@media only screen and (max-width: 680px) {
+    #formulario {
+        max-width: 80%;
+        margin: 30px auto;
+    }
+    #media-final {
+        margin-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    body {
+        font-size: 4vw;
+    }
+    #formulario {
+        max-width: 95%;
+        margin: 30px auto;
+    }
+    #detalhamento {
+        font-size: 3vw;
+        font-weight: 800;
+        margin: 50px auto;
+        max-width: 95%;
+    }
+    #btn-fechar-detalhamento {
+        width: 50%;
+        position: relative;
+        left: 25%;
+    }
+}

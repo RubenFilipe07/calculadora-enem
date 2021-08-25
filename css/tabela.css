@@ -1,0 +1,49 @@
+:root{
+    --alabaster: #E2E5DEff;
+    --viridian-green: #1AA3A9ff;
+    --orange-peel: #FFA523ff;
+    --paradise-pink: #DD375Bff;
+    --star-command-blue: #2878B5ff;
+    --leafy-woodland: #acba10;
+}
+
+table td{
+    color: white;
+    font-weight: 500;
+}
+
+.tabela-descricao td:nth-child(1){
+    background-color: var(--viridian-green);
+}
+
+.tabela-descricao td:nth-child(2){
+    background-color: var(--star-command-blue);
+}
+
+.tabela-descricao td:nth-child(3){
+    background-color: var(--orange-peel);
+}
+
+.tabela-descricao td:nth-child(4){
+    background-color: var(--paradise-pink);
+}
+
+.cadernos{
+    color: var(--viridian-green)
+}
+
+.notas{
+    color: var(--star-command-blue);
+}
+
+.pesos{
+    color: var(--orange-peel);
+}
+
+.peso-nota{
+    color: var(--paradise-pink);
+}
+
+.operacao{
+    color: var(--star-command-blue);
+}

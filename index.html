@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Enem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/tabela.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <form class="form-control" id="formulario">
+        <div class="form-group">
+            <h4 class="text-center">Média Enem</h4>
+            <label for="text">Nota de Ciências da Natureza</label>
+            <div class="input-group">
+                <input id="nota-natureza" class="form-control" placeholder="0"  type="number" />
+                <input id="peso-natureza" class="form-control" placeholder="Peso"  type="number" />
+            </div>
+
+            <label for="text">Nota de Ciências Humanas</label>
+            <div class="input-group">
+                <input id="nota-humanas" class="form-control" placeholder="0"  type="number" />
+                <input id="peso-humanas" class="form-control" placeholder="Peso"  type="number" />
+            </div>
+
+            <label for="text">Nota de Linguagens</label>
+            <div class="input-group">
+                <input id="nota-linguagens" class="form-control" placeholder="0"  type="number" />
+                <input id="peso-linguagens" class="form-control" placeholder="Peso"  type="number" />
+            </div>
+
+            <label for="text">Nota de Matemática</label>
+            <div class="input-group">
+                <input id="nota-matematica" class="form-control" placeholder="0"  type="number" />
+                <input id="peso-matematica" class="form-control" placeholder="Peso"  type="number" />
+            </div>
+
+            <label for="text">Nota da Redação</label>
+            <div class="input-group">
+                <input id="nota-redacao" class="form-control" placeholder="0"  type="number" />
+                <input id="peso-redacao" class="form-control" placeholder="Peso"  type="number" />
+            </div>
+            
+            <button type="button" class="btn btn-primary" id="calcular">Calcular</button>
+            <button type="button" class="btn btn-secondary" id="detalhar">Detalhar nota</button>
+            <button type="button" class="btn btn-danger" id="limpar">Limpar</button>
+            <h5 id="media-final">Média: </h5>
+
+        </div>
+      </form>
+     
+      <div id="detalhamento" class="janela-detalhamento">
+        <table class="table table-striped table-bordered" style="text-align: center;">
+            <tr class="tabela-descricao">
+                <td>CADERNO</td>
+                <td>NOTA</td>
+                <td>PESO</td>
+                <td>PESO X NOTA</td>
+            </tr>    
+    
+            <tr>
+                <td class="cadernos">Ciências da Natureza</td>
+                <td class="notas" id="tabela-nota-natureza">0,00</td>
+                <td class="pesos" id="tabela-peso-natureza">0,00</td>
+                <td class="peso-nota" id="tabela-peso-nota-natureza">0,00</td>
+            </tr>
+    
+            <tr>
+                <td class="cadernos">Ciências Humanas</td>
+                <td class="notas" id="tabela-nota-humanas">0,00</td>
+                <td class="pesos" id="tabela-peso-humanas">0,00</td>
+                <td class="peso-nota" id="tabela-peso-nota-humanas">0,00</td>
+            </tr>
+    
+            <tr>
+                <td class="cadernos">Linguagens</td>
+                <td class="notas" id="tabela-nota-linguagens">0,00</td>
+                <td class="pesos" id="tabela-peso-linguagens">0,00</td>
+                <td class="peso-nota" id="tabela-peso-nota-linguagens">0,00</td>
+            </tr>
+    
+            <tr>
+                <td class="cadernos">Matemática</td>
+                <td class="notas" id="tabela-nota-matematica">0,00</td>
+                <td class="pesos" id="tabela-peso-matematica">0,00</td>
+                <td class="peso-nota" id="tabela-peso-nota-matematica">0,00</td>
+            </tr>
+    
+            <tr>
+                <td class="cadernos">Redação</td>
+                <td class="notas"  id="tabela-nota-redacao">0,00</td>
+                <td class="pesos" id="tabela-peso-redacao">0,00</td>
+                <td class="peso-nota" id="tabela-peso-nota-redacao">0,00</td>
+            </tr>
+
+            <tr>
+                <td class="cadernos">Total</td>
+                <td class="notas"></td>
+                <td class="pesos" id="tabela-soma-pesos">0,00</td>
+                <td class="peso-nota" id="tabela-multiplica-peso-nota">0,00</td>
+            </tr>
+
+
+            <tr>
+                <td colspan="5"><span class="cadernos">Média ponderada:</span> <span class="peso-nota" id>Soma dos Pesos x Notas</span> <span class="operacao">&divide;</span> <span class="pesos">Total de pesos</span> <span class="operacao">=</span> <span  class="cadernos">Resultado</span></td>
+            </tr>
+    
+            <tr>
+                <td colspan="5"><span class="cadernos">Média ponderada:</span> <span id="span-multiplica-peso-nota" class="peso-nota" id></span> <span class="operacao">&divide;</span> <span id="span-soma-pesos"class="pesos"> </span> <span class="operacao">=</span> <span id="span-media-detalhada" class="cadernos"></span></td>
+            </tr>
+        </table>
+      </div>
+
+      <button type="button" class="btn btn-success janela-detalhamento" id="btn-fechar-detalhamento">Ok</button>
+
+      <footer class="text-center text-lg-start footer">
+        <div class="text-center p-3">
+            Desenvolvido por: 
+            <a href="https://github.com/rubenfilipe07">Rúben Filipe</a>
+        </div>
+      </footer>
+</body>
+</html>
