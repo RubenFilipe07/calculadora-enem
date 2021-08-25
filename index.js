@@ -27,7 +27,12 @@ $(document).ready(function () {
     });
 
     $("#detalhar").click(function () {
-        if ($('input[type=number]').val() == '') {
+        if ($('#nota-natureza').val() == '' || $('#nota-humanas').val() == ''
+            || $('#nota-linguagens').val() == '' || $('#nota-matematica').val() == ''
+            || $('#nota-redacao').val() == '' || $('#peso-natureza').val() == ''
+            || $('#peso-humanas').val() == '' || $('#peso-linguagens').val() == ''
+            || $('#peso-matematica').val() == '' || $('#peso-redacao').val() == ''
+        ) {
             $('.alert').fadeIn();
         } else {
             $('.alert').hide();
