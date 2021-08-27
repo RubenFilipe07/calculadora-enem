@@ -83,6 +83,7 @@ $(document).ready(function () {
 
     $("#limpar").click(function () {
         $('input[type=number]').val('');
+        $('#media-final').css('color', 'transparent');
     });
 
     $("#btn-fechar-detalhamento").click(function () {
